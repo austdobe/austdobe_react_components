@@ -2,17 +2,15 @@ import React from "react";
 import "../../styles/Card.css"
 
 export interface ICardProp {
-    bg?: string
+    classes?: string
     image?: string
     description: string
 }
 
 const Card = (props:ICardProp) => {
-    const newDescription = props.description 
-    console.log(newDescription.length)
 
     return (
-        <div className={`card ${props.bg}`}>
+        <div className={`card ${props.classes ? props.classes ?? '' : ''}` }>
             {props.image && 
             <div className="image_wrapper">
                 <img className="image" src={props.image} />

@@ -11,7 +11,7 @@ export interface IButtonProp {
 const Button = (props:IButtonProp) => {
     
     return (
-        <button className={ `button ${props.classes ? props.classes ?? '' : ''}` } >
+        <button data-testid="button" className={ `button ${props.classes ? props.classes ?? '' : ''}` } >
             {props.label}
         </button>
     )
