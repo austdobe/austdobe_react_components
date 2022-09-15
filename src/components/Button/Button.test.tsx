@@ -1,10 +1,27 @@
-import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen, cleanup } from "@testing-library/react"
+import "@testing-library/jest-dom"
 
 import Button from "./Button";
+import React from "react";
 
-describe("Button", () => {
+afterEach(() => {
+    cleanup();
+})
+
+describe("Button Component", () => {
+    render(<Button label="Button" classes="bg-dark"/>)
+    const button = screen.getByTestId('button')
+
     test("renders the Button component", () => {
-        render(<Button label="Button Label" />)
+        expect(button).toBeTruthy()
     })
+
+    test("button label renders correctly", () => {
+        expect(button).toHaveTextContent("Button")
+    })
+    
+    test("classes added", () => {
+        expect(button).toHaveAttribute("classes")
+    })
+        
 })

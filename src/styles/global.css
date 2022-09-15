@@ -1,0 +1,21 @@
+.bg-dark {
+    background: rgba(25,25,25,1);
+    color: rgb(255, 255, 255);
+}
+.bg-light {
+    background-color: rgb(202, 202, 202);
+    color: rgb(25,25,25);
+
+}
+.font-big{
+    font-size: 30px;
+}
+.font-small {
+    font-size: 12px;
+}
+.font-light {
+    color: white;
+}
+.font-dark {
+    color: black
+}
