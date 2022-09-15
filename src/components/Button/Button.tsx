@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../../styles/global.css"
-import "../../styles/Button.css"
+import { Wrapper } from './Button.styles';
 
 export interface IButtonProp {
     label: string;
@@ -11,9 +11,9 @@ export interface IButtonProp {
 const Button = (props:IButtonProp) => {
     
     return (
-        <button data-testid="button" className={ `button ${props.classes ? props.classes ?? '' : ''}` } >
+        <Wrapper data-testid="button" className={ `button ${props.classes ? props.classes ?? '' : ''}` } >
             {props.label}
-        </button>
+        </Wrapper>
     )
 }
 
